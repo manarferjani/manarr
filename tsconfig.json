@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
+    "target": "ESNext",
+    "types": ["@chakra-ui/react"],
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
+    "module": "ESNext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -18,10 +19,16 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".", // Base directory pour les chemins relatifs
     "paths": {
-      "@/*": ["./*"]
+      "@app/*": ["./app/*"], // Mappe @app/ vers le dossier app/
+      "@models/*": ["./models/*"],// Mappe @models/ vers le dossier models/
+      "@Backend/*": ["../Backend/*"] , // Chemin relatif depuis frontend/
+      "@/*": ["./*"],  // Pointe directement à la racine
+      "@/hooks/*": ["hooks/*"],
+      "@/lib/*": ["lib/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/providers"],
   "exclude": ["node_modules"]
 }
