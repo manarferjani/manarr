@@ -1,3 +1,14 @@
+import Image from "next/image";
+
+import { getUserSession } from '@app/lib/session'
+import { User } from '@Backend/models/users';
+import Button from '@app/components/ui/button';
+
+//export default async function Home() {
+//  const user = await getUserSession()
+//  return <main className="">{JSON.stringify(user)}</main>
+//}
+
 import { Layout } from "lucide-react";
 import Link from "next/link";
 
@@ -20,3 +31,4 @@ export default function Home() {
     </div>
   );
 }
+

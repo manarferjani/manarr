@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/providers/theme-provider";
-import { ActiveThemeProvider } from "@/components/active-theme";
+import { ThemeProvider } from "@/app/components/providers/theme-provider";
+import { ActiveThemeProvider } from "@/app/components/active-theme";
 import { cookies } from "next/headers";
-import { cn } from "@/lib/utils";
+import { cn } from "@/app/lib/utils";
 
 const META_THEME_COLORS = {
   light: "#ffffff",
